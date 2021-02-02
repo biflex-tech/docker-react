@@ -1,7 +1,21 @@
 {
   "AWSEBDockerrunVersion": "2",
   "Logging": "/tmp/sample-app",
-  "Image": {
-  	"Update": "false"
-  }
+  "containerDefinitions": [
+    {
+      "name": "nginx",
+      "image": "nginx",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ]
+
+    }
+  ]  
 }
+
+

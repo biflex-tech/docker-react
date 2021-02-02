@@ -1,7 +1,7 @@
 #mark stage as builder
 FROM node:alpine
 WORKDIR '/app'
-COPY package*.json ./
+COPY *.json ./
 RUN npm install
 COPY . .
 RUN npm run build 

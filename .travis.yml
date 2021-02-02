@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t biflex/docker-react -f Dockerfile .
+  - docker build -t biflex/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true biflex/docker-react npm run test
@@ -20,3 +20,4 @@ deploy:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
+  

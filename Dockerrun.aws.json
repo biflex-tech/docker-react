@@ -12,10 +12,16 @@
           "hostPort": 80,
           "containerPort": 80
         }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "app",
+          "containerPath": "/usr/share/nginx/html",
+          "readOnly": true
+        }
       ]
-
     }
-  ]  
+  ]
 }
 
 
